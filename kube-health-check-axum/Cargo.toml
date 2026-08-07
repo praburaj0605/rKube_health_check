@@ -1,0 +1,26 @@
+[package]
+name = "kube-health-check-axum"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+description = "Axum adapter for kube-health-check"
+readme = "../README.md"
+
+[features]
+default = []
+metrics = ["kube-health-check/metrics"]
+
+[dependencies]
+kube-health-check = { workspace = true }
+axum = { workspace = true }
+serde_json = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "net"] }
+tower = { workspace = true, features = ["util"] }
+http-body-util = { workspace = true }
+serde_json = { workspace = true }
+kube-health-check = { workspace = true }

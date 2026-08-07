@@ -1,0 +1,15 @@
+[package]
+name = "kube-health-check-actix"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+description = "Actix-Web adapter for kube-health-check"
+readme = "../README.md"
+
+[dependencies]
+kube-health-check = { workspace = true }
+actix-web = { workspace = true }
+serde_json = { workspace = true }

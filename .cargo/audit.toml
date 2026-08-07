@@ -1,0 +1,7 @@
+# cargo-audit configuration (used by `cargo audit` and rustsec/audit-check)
+[advisories]
+ignore = [
+    # sqlx-mysql → rsa: Marvin Attack; no fixed upgrade from rsa maintainers.
+    # This library does not perform RSA crypto itself; risk is transitive via optional mysql feature.
+    "RUSTSEC-2023-0071",
+]

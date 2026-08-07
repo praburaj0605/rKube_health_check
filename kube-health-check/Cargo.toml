@@ -1,0 +1,66 @@
+[package]
+name = "kube-health-check"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+description = "Production-ready Kubernetes health endpoints for Rust (liveness, readiness, startup)"
+readme = "../README.md"
+keywords = ["kubernetes", "health", "readiness", "liveness", "cloud-native"]
+categories = ["network-programming", "asynchronous", "web-programming"]
+
+[features]
+default = []
+metrics = ["dep:prometheus"]
+liveness-ext = ["dep:sysinfo"]
+postgres = ["dep:sqlx", "sqlx/postgres"]
+mysql = ["dep:sqlx", "sqlx/mysql"]
+sqlite = ["dep:sqlx", "sqlx/sqlite"]
+mssql = []
+redis = ["dep:redis"]
+mongodb = []
+kafka = []
+rabbitmq = ["dep:lapin"]
+nats = ["dep:async-nats"]
+elasticsearch = []
+full = [
+    "metrics",
+    "liveness-ext",
+    "postgres",
+    "mysql",
+    "sqlite",
+    "mssql",
+    "redis",
+    "mongodb",
+    "kafka",
+    "rabbitmq",
+    "nats",
+    "elasticsearch",
+]
+
+[dependencies]
+async-trait = { workspace = true }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tokio = { workspace = true, features = ["rt", "time", "macros", "sync", "net"] }
+chrono = { workspace = true }
+thiserror = { workspace = true }
+tracing = { workspace = true }
+hostname = { workspace = true }
+futures = { workspace = true }
+prometheus = { workspace = true, optional = true }
+sysinfo = { workspace = true, optional = true }
+sqlx = { workspace = true, optional = true }
+redis = { workspace = true, optional = true }
+lapin = { workspace = true, optional = true }
+async-nats = { workspace = true, optional = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "time", "sync", "net"] }
+criterion = { workspace = true }
+
+[[bench]]
+name = "overhead"
+harness = false

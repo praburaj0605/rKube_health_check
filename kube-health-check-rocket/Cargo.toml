@@ -1,0 +1,14 @@
+[package]
+name = "kube-health-check-rocket"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+authors.workspace = true
+description = "Rocket adapter for kube-health-check"
+readme = "../README.md"
+
+[dependencies]
+kube-health-check = { workspace = true }
+rocket = { workspace = true }
