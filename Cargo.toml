@@ -15,7 +15,9 @@ default-members = ["kube-health-check", "kube-health-check-axum"]
 version = "0.1.0"
 edition = "2021"
 license = "MIT OR Apache-2.0"
-repository = "https://github.com/example/kube-health-check"
+repository = "https://github.com/praburaj0605/rKube_health_check"
+homepage = "https://github.com/praburaj0605/rKube_health_check"
+documentation = "https://docs.rs/kube-health-check"
 rust-version = "1.75"
 authors = ["Kube-Health-Check Contributors"]
 

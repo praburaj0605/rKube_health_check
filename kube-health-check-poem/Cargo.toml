@@ -4,10 +4,13 @@ version.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
+homepage.workspace = true
 rust-version.workspace = true
 authors.workspace = true
 description = "Poem adapter for kube-health-check"
 readme = "../README.md"
+keywords = ["kubernetes", "health", "poem", "readiness", "liveness"]
+categories = ["network-programming", "asynchronous", "web-programming"]
 
 [dependencies]
 kube-health-check = { workspace = true }

@@ -4,12 +4,15 @@ version.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
+homepage.workspace = true
+documentation.workspace = true
 rust-version.workspace = true
 authors.workspace = true
 description = "Production-ready Kubernetes health endpoints for Rust (liveness, readiness, startup)"
 readme = "../README.md"
 keywords = ["kubernetes", "health", "readiness", "liveness", "cloud-native"]
 categories = ["network-programming", "asynchronous", "web-programming"]
+exclude = ["fuzz/"]
 
 [features]
 default = []

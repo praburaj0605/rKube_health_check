@@ -4,10 +4,13 @@ version.workspace = true
 edition.workspace = true
 license.workspace = true
 repository.workspace = true
+homepage.workspace = true
 rust-version.workspace = true
 authors.workspace = true
 description = "Axum adapter for kube-health-check"
 readme = "../README.md"
+keywords = ["kubernetes", "health", "axum", "readiness", "liveness"]
+categories = ["network-programming", "asynchronous", "web-programming"]
 
 [features]
 default = []
